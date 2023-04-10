@@ -1,0 +1,87 @@
+﻿<Window x:Class="RDA.TaskSQL2.View.RegMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RDA.TaskSQL2.View"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Title="RegMenu" Height="450" Width="600">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0 0 0 20">
+                <TextBlock FontSize="20">Регистрация</TextBlock>
+            </StackPanel>
+            <StackPanel Margin="0 0 0 10"
+                        Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Person"
+                                         Height="30"
+                                         Width="30"/>
+                <TextBox Width="200"
+                         FontSize="20"
+                         x:Name="TbLogin"
+                         Foreground="Black"
+                         materialDesign:HintAssist.Hint="Введите логин"
+                         materialDesign:TextFieldAssist.HasClearButton="True"/>
+            </StackPanel>
+            <StackPanel Margin="0 0 0 10"
+                        Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Password"
+                                         Height="30"
+                                         Width="30"/>
+                <PasswordBox
+                    Width="200"
+                    FontSize="20"
+                    x:Name="PbPassword"
+                    Foreground="Black"
+                    materialDesign:HintAssist.Hint="Введите пароль"
+                    materialDesign:TextFieldAssist.HasClearButton="True"/>
+            </StackPanel>
+            <StackPanel>
+                <Button
+                    FontSize="20"
+                    Width="275"
+                    Height="40"
+                    Background="Black"
+                    BorderBrush="Black"
+                    Foreground="White"
+                    x:Name="BtnReg"
+                    Cursor="Hand"
+                    Click="BtnReg_Click"
+    Margin="2,0"
+    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+    materialDesign:ButtonProgressAssist.IndicatorBackground="Black"
+                    materialDesign:ButtonProgressAssist.IndicatorForeground="White"
+    materialDesign:ButtonProgressAssist.Value="-1"
+    Content="Зарегистрироваться"
+    Style="{StaticResource MaterialDesignRaisedButton}" />
+            </StackPanel>
+            <StackPanel Margin="0 10 0 0">
+                <Button
+                    FontSize="20"
+                    Width="275"
+                    Height="40"
+                    Background="White"
+                    BorderBrush="Black"
+                    Cursor="Hand"
+                    Foreground="Black"
+                    x:Name="BtnBack"
+                    Click="BtnBack_Click"
+    Margin="2,0"
+    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+    materialDesign:ButtonProgressAssist.IndicatorBackground="Black"
+                    materialDesign:ButtonProgressAssist.IndicatorForeground="White"
+    materialDesign:ButtonProgressAssist.Value="-1"
+    Content="На главную"
+    Style="{StaticResource MaterialDesignRaisedButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
